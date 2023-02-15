@@ -1,20 +1,27 @@
-#ay mate this be a python projekt fir calculatin
-number1=eval(input("Enter a number"))
-number2=eval(input("Enter another number"))
-#DRY-Don't repeat yourself
-operator=input("Enter an operator")
-def add(num1,num2):
-    result=num1+num2
-    return[result]
-def subtract(num1,num2):
-    result=num1-num2
-    return result
-
-def divide(num1,num2):
-    result=num1/num2
-    return result
-
-def multiply (num1,num2):
-    result=num1*num2
-    return result
-    
+#Lets go
+Equation=input("Enter the equation")
+def any_simple_calculation (Equation):
+    operators=['/','X','+','-']
+    for i in range(len(Equation)):
+        for x in range(len(operators)):
+            if Equation[i]=='/':
+                operator=Equation.index('/')
+                num1=int(Equation[0:operator])
+                num2=int(Equation[operator+1:])
+                return print(num1/num2)
+            elif Equation[i]=='X':
+                operator=Equation.index('X')
+                num1=int(Equation[0:operator])
+                num2=int(Equation[operator+1:])
+                return print(num1*num2)
+            elif Equation[i]=='+':
+                operator=Equation.index('+')
+                num1=int(Equation[0:operator])
+                num2=int(Equation[operator+1:])
+                return print(num1+num2)
+            elif Equation[i]=='-':
+                operator=Equation.index('-')
+                num1=int(Equation[0:operator])
+                num2=int(Equation[operator+1:])
+                return print(num1-num2)
+any_simple_calculation(Equation)
